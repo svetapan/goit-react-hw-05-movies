@@ -4,8 +4,21 @@
     padding: 10px;
 }
 
+.comeback {
+display: flex;
+gap: 10px;
+align-items: center;
+margin: 10px 0;
+}
+
 .btn {
-    margin: 10px 0;
+    padding: 5px 10px;
+    transition: all 300ms ease-out;
+}
+
+.btn:hover {
+    background-color: #aa9f9f;
+    scale: 1.07;
 }
 
 .information {
@@ -15,4 +28,20 @@
 .addInformation {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
     padding: 10px;
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.navLinkActive {
+    color: red;
+}
+
+.link {
+    transition: color 300ms ease-out;
+}
+
+.link:hover {
+    color: red;
 }

@@ -1,4 +1,5 @@
 import getMovieDetails from 'api/getMovieDetails';
+import { FaArrowLeft } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import css from './MovieDetails.module.css'
 import { useParams, useLocation, useNavigate, Link } from 'react-router-dom';
@@ -27,7 +28,10 @@ const MoviesDetails = () => {
 
   return (
     <div>
+      <div className={css.comeback}>
+      <FaArrowLeft />
       <button className={css.btn} onClick={handleGoBack}>Go back</button>
+      </div>
       {movie ? (
         <>
           <div className={css.thumb}>
@@ -58,10 +62,10 @@ const MoviesDetails = () => {
             <h2>Additional information</h2>
             <ul>
               <li>
-                <Link to={`/movies/${movieId}/reviws`}>Reviews</Link>
+                <Link className={css.link} to={`/movies/${movieId}/reviws`}>Reviews</Link>
               </li>
               <li>
-                <Link to={`/movies/${movieId}/cast`}>Cast</Link>
+                <Link className={css.link} to={`/movies/${movieId}/cast`}>Cast</Link>
               </li>
             </ul>
           </div>
